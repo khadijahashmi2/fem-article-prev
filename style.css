@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    --vdarkgrayishblue: hsl(217, 19%, 35%);
+    --desatdarkblue: hsl(214, 17%, 51%);
+    --grayishblue: hsl(212, 23%, 69%);
+    --lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--lightgrayishblue);
+}
+
+.circle.active + .share {
+    display: block;
+}
+
+.circle.active {
+    background-color: red;
+}
+
+
+.container {
+    min-width: 400px;
+    margin: 3em;
+}
+
+.image img {
+    width: 100%;
+}
+
+.text {
+    padding: 30px;
+    background-color: white;
+}
+
+.text h1 {
+    font-size: 20px;
+}
+
+.share {
+    background-color: var(--vdarkgrayishblue);
+    border-radius: 0px 0px 20px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.share p {
+    letter-spacing: 5px;
+    font-size: 15px;
+}
+
+.profile {
+    display: none;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    .container {
+        display: flex;
+        margin: 20em;
+    }
+    .image {
+        width: 700px;
+    }
+
+    .sh {
+        display: none;
+    }
+
+    .image img {
+        height: 100%;
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    .share {
+        height: 50%;
+        border-radius: 20px;
+        margin-left: -200px;
+        margin-top: 100px;
+        display: none;
+    }
+
+    .circle.active + .share {
+        display: block;
+    }
+
+    .profile {
+        display: flex;
+        font-size: 15px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .profile h2 {
+        font-size: 15px;
+    }
+
+
+    .p {
+        display: flex;
+    }
+
+    .mic {
+        padding-right: 20px;
+    }
+
+    .profile img {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+    }
+
+    .circle {
+        background-color: grey;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+}
